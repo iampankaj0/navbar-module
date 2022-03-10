@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"  crossorigin="anonymous"></script>
+    <title>Navbar Module</title>
+
+<style>
+
+a:hover{
+    text-decoration: none;
+}
+.btn:focus{
+    box-shadow: none;
+    outline: none;
+}
+.navbar-section{
+    background: #000;
+    padding: 15px 0;
+}
+.navbar-section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-section header .brand-logo a{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar-section .open-close-button button{
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+}
+.navbar-section .open-close-button button:hover{
+    color: #999;
+    border-color: #999;
+}
+.nav-tags{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px;
+}
+.nav-tags button{
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+.nav-tags button:hover{
+    color: #999;
+    transition: .5s;
+}
+.nav-tags a{
+    display: block;
+    margin-top: 30px;
+    color: #888;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.nav-tags a:hover{
+    color: #fff;
+    transition: .5s;
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="navbar-section">
+    <div class="container">
+        <header>
+            <div class="brand-logo">
+                <a href="#!" class="nav-logo">NAVBAR</a>
+            </div>
+            <div class="open-close-button">
+                <button class="btn" onclick="openNav()">☰</button>
+            </div>
+        </header>
+    </div>
+
+</section>
+
+<div class="nav-tags" id="navbar-links">
+    <button class="btn" class="close-nav-btn" onclick="closeNav()">x</button>
+    <a href="#!" onclick="closeNav()">Home</a>
+    <a href="#!" onclick="closeNav()">Carrer</a>
+    <a href="#!" onclick="closeNav()">About</a>
+    <a href="#!" onclick="closeNav()">Help</a>
+    <a href="#!" onclick="closeNav()">Contact</a>
+</div>
+
+
+<script>
+    function openNav() {
+        document.getElementById("navbar-links").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("navbar-links").style.width = "0" ;
+    }
+</script>
+
+</body>
+</html>
